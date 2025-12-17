@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/logo1.png">
+    <title>Контакты - Movie Stores</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Movie Stores Logo" class="logo">
+        </div>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <a href="auth.html" class="header-btn login-btn">Вход</a>
+                <a href="cart.html" class="header-btn cart-btn">
+                    Корзина
+                    <span class="cart-badge">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Наши контакты</h1> <!--сновной заголовок-->
+            <div class="contact-info">
+                <!--основной блок инормации-->
+                <h2>Movie Stores - Ваш киномагазин</h2>
+                <p class="slogan"><strong>Слоган:</strong> "Кино — ваше вечное увлечение. Купите свой фильм навсегда!"</p> <!--слоган компании (курсив, стилизованный отдельным цветом)-->
+
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <h3>Телефон</h3>
+                        <p><a href="tel:+74951234567">+7 (921) 391-46-75</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Email</h3>
+                        <p><a href="mailto:info@moviestores.ru">info@moviestores.ru</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Адрес</h3>
+                        <p>г. Москва, Варшавское шоссе, 42</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Время работы</h3>
+                        <p>Пн-Пт: 9:00-21:00<br>Сб-Вс: 10:00-20:00</p>
+                    </div>
+                </div>
+
+                <!-- Блок с картой -->
+                <div class="map-container">
+                    <h3>Мы на карте</h3>
+                    <div class="map-wrapper">
+                        <iframe src="https://yandex.ru/map-widget/v1/?ll=37.625064%2C55.675961&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NjkzMzA5MBI_0KDQvtGB0YHQuNGPLCDQnNC-0YHQutCy0LAsINCS0LDRgNGI0LDQstGB0LrQvtC1INGI0L7RgdGB0LUsIDQyIgoNEYAWQhUvtF5C&z=17.13"
+                                width="100%" 
+                                height="400" 
+                                frameborder="0" 
+                                allowfullscreen="true"
+                                style="min-width: 100%;">
+                        </iframe>
+                    </div>
+                    <p class="map-note">Наш магазин находится в пешей доступности от станции метро Нагатинская.</p>
+                </div>
+            </div>
+
+            <div class="support-info">
+                <h2>Служба поддержки</h2>
+                <p>Если у вас возникли вопросы по покупке или скачиванию фильмов, наша служба поддержки работает круглосуточно:</p>
+                <p><strong>Телефон поддержки:</strong> <a href="tel:+78001234567">8-800-123-45-67</a> (бесплатно по России)</p>
+                <p><strong>Email поддержки:</strong> <a href="mailto:support@moviestores.ru">support@moviestores.ru</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Movie Stores. Все права защищены.</p>
+        </div>
+    </footer>
+    <script src="cart-system.js"></script>
+    <script src="auth-v2.js"></script>
+</body>
+</html>

@@ -1,0 +1,470 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/logo1.png">
+    <title>Movie Stores - Главная</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Movie Stores Logo" class="logo">
+        </div>
+        <div class="container">
+            <!-- Этот div должен быть на ВСЕХ страницах -->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <a href="auth.html" class="header-btn login-btn">Вход</a>
+                <a href="cart.html" class="header-btn cart-btn">
+                    Корзина
+                    <span class="cart-badge">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Карусель с длинными горизонтальными фото -->
+        <section class="carousel-section">
+            <div class="container">
+                <!-- Добавляем заголовок карусели -->
+                <div class="carousel-header">
+                    <h2>Новинка в этом месяце</h2>
+                    <p>Самые ожидаемые премьеры</p>
+                </div>
+
+                <div class="carousel-container">
+                    <div class="carousel-wrapper">
+                        <button class="carousel-btn prev">‹</button>
+
+                        <div class="carousel">
+                            <!-- Фильм 1 -->
+                            <div class="carousel-item">
+                                <div class="carousel-content">
+                                    <img src="images/wanda.jpg" alt="Доктор Стрендж в MOM" class="carousel-image">
+                                    <div class="carousel-caption">
+                                        <div class="carousel-title">Доктор Стрендж в мультивселенной безумия</div>
+                                        <div class="carousel-subtitle">
+                                            Фэнтези о путешествии между реальностями, борьбе с безумием, темной магии.
+                                        </div>
+                                        <a href="product16.html" class="carousel-btn-watch">Смотреть</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Фильм 2 -->
+                            <div class="carousel-item">
+                                <div class="carousel-content">
+                                    <img src="images/hungergames.jpg" alt="Голодные игры" class="carousel-image">
+                                    <div class="carousel-caption">
+                                        <div class="carousel-title">ГОЛОДНЫЕ ИГРЫ</div>
+                                        <div class="carousel-subtitle">
+                                            Приключенческий боевик о выживании в жестоких играх на выживание.
+                                        </div>
+                                        <a href="product1.html" class="carousel-btn-watch">Смотреть</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Фильм 3 -->
+                            <div class="carousel-item">
+                                <div class="carousel-content">
+                                    <img src="images/menu.jpg" alt="Меню" class="carousel-image">
+                                    <div class="carousel-caption">
+                                        <div class="carousel-title">Меню</div>
+                                        <div class="carousel-subtitle">
+                                            Триллер о роскошном ужине, который превращается в кошмар.
+                                        </div>
+                                        <a href="product2.html" class="carousel-btn-watch">Смотреть</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Фильм 4 -->
+                            <div class="carousel-item">
+                                <div class="carousel-content">
+                                    <img src="images/art.jpg" alt="Ужасающий 3" class="carousel-image">
+                                    <div class="carousel-caption">
+                                        <div class="carousel-title">Ужасающий 3</div>
+                                        <div class="carousel-subtitle">
+                                            Ужас о наследовании кровавой маски. Клоун неумолимо преследует жерту.
+                                        </div>
+                                        <a href="product17.html" class="carousel-btn-watch">Смотреть</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Фильм 5 -->
+                            <div class="carousel-item">
+                                <div class="carousel-content">
+                                    <img src="images/5arar.jpg" alt="Пять ночей с Фредди" class="carousel-image">
+                                    <div class="carousel-caption">
+                                        <div class="carousel-title">Пять ночей с Фредди</div>
+                                        <div class="carousel-subtitle">
+                                            Ужас о безумных аниматрониках. Ночная смена становится игрой на выживание.
+                                        </div>
+                                        <a href="product18.html" class="carousel-btn-watch">Смотреть</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="carousel-btn next">›</button>
+                    </div>
+
+                    <!-- Точки навигации -->
+                    <div class="carousel-dots">
+                        <button class="carousel-dot"></button>
+                        <button class="carousel-dot active"></button>
+                        <button class="carousel-dot"></button>
+                        <button class="carousel-dot"></button>
+                        <button class="carousel-dot"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция популярных фильмов -->
+        <section class="featured-movies">
+            <div class="container">
+                <h2>Популярные фильмы</h2>
+                <div class="movies-row">
+
+                    <!-- Фильм 1 -->
+                    <div class="movie-item">
+                        <div class="movie-card">
+                            <div class="movie-card-content">
+                                <img src="images/poster1.jpg" alt="Голодные Игры" class="movie-poster">
+                                <h3 class="movie-title">Голодные Игры</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фильм 2 -->
+                    <div class="movie-item">
+                        <div class="movie-card">
+                            <div class="movie-card-content">
+                                <img src="images/poster2.jpg" alt="Меню" class="movie-poster">
+                                <h3 class="movie-title">Меню</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фильм 3 -->
+                    <div class="movie-item">
+                        <div class="movie-card">
+                            <div class="movie-card-content">
+                                <img src="images/poster3.jpg" alt="Его три дочери" class="movie-poster">
+                                <h3 class="movie-title">Его три дочери</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фильм 4 -->
+                    <div class="movie-item">
+                        <div class="movie-card">
+                            <div class="movie-card-content">
+                                <img src="images/poster4.jpg" alt="Дьявол носит прада" class="movie-poster">
+                                <h3 class="movie-title">Дьявол носит прада</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фильм 5 -->
+                    <div class="movie-item">
+                        <div class="movie-card">
+                            <div class="movie-card-content">
+                                <img src="images/poster5.jpg" alt="Крик" class="movie-poster">
+                                <h3 class="movie-title">Крик</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фильм 6 -->
+                    <div class="movie-item">
+                        <div class="movie-card">
+                            <div class="movie-card-content">
+                                <img src="images/poster6.jpg" alt="Опасная игра Слоун" class="movie-poster">
+                                <h3 class="movie-title">Опасная игра Слоун</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фильм 7 -->
+                    <div class="movie-item">
+                        <div class="movie-card">
+                            <div class="movie-card-content">
+                                <img src="images/poster7.jpg" alt="Интерстеллар" class="movie-poster">
+                                <h3 class="movie-title">Интерстеллар</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фильм 8 -->
+                    <div class="movie-item">
+                        <div class="movie-card">
+                            <div class="movie-card-content">
+                                <img src="images/poster8.jpg" alt="Богемская рапсодия" class="movie-poster">
+                                <h3 class="movie-title">Богемская рапсодия</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фильм 9 -->
+                    <div class="movie-item">
+                        <div class="movie-card">
+                            <div class="movie-card-content">
+                                <img src="images/poster9.jpg" alt="Круэлла" class="movie-poster">
+                                <h3 class="movie-title">Круэлла</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фильм 10 -->
+                    <div class="movie-item">
+                        <div class="movie-card">
+                            <div class="movie-card-content">
+                                <img src="images/poster10.jpg" alt="Дом Gucci" class="movie-poster">
+                                <h3 class="movie-title">Дом Gucci</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фильм 11 -->
+                    <div class="movie-item">
+                        <div class="movie-card">
+                            <div class="movie-card-content">
+                                <img src="images/poster11.jpg" alt="Вечность" class="movie-poster">
+                                <h3 class="movie-title">Вечность</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фильм 12 -->
+                    <div class="movie-item">
+                        <div class="movie-card">
+                            <div class="movie-card-content">
+                                <img src="images/poster12.jpg" alt="Это всё Агата" class="movie-poster">
+                                <h3 class="movie-title">Это всё Агата</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фильм 13 -->
+                    <div class="movie-item">
+                        <div class="movie-card">
+                            <div class="movie-card-content">
+                                <img src="images/poster13.jpg" alt="Дивергент" class="movie-poster">
+                                <h3 class="movie-title">Дивергент</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фильм 14 -->
+                    <div class="movie-item">
+                        <div class="movie-card">
+                            <div class="movie-card-content">
+                                <img src="images/poster14.jpg" alt="Война миров Z" class="movie-poster">
+                                <h3 class="movie-title">Война миров Z</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Фильм 15 -->
+                    <div class="movie-item">
+                        <div class="movie-card">
+                            <div class="movie-card-content">
+                                <img src="images/poster15.jpg" alt="Тайна 7 сестёр" class="movie-poster">
+                                <h3 class="movie-title">Тайна 7 сестёр</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Остальные фильмы по аналогии -->
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция преимуществ -->
+        <section class="features">
+            <div class="container">
+                <h2>Почему выбирают нас?</h2>
+                <div class="features-grid">
+                    <div class="feature">
+                        <h3>Большая коллекция</h3>
+                        <p>Более 10,000 фильмов разных жанров и годов</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Высокое качество</h3>
+                        <p>Фильмы в HD и 4K качестве</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Мгновенное скачивание</h3>
+                        <p>Скачивайте сразу после оплаты</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Секция FAQ (Часто задаваемые вопросы) -->
+        <section class="faq-section">
+            <div class="container">
+                <h2>Ответы на частые вопросы</h2>
+
+                <div class="faq-container">
+                    <!-- Вопрос 1 -->
+                    <div class="faq-item">
+                        <div class="faq-card">
+                            <div class="faq-question">
+                                <div class="faq-question-text">
+                                    Можно ли включить пробный период, не привязывая банковскую карту?
+                                </div>
+                                <div class="faq-icon">+</div>
+                            </div>
+                            <div class="faq-answer">
+                                <div class="faq-answer-content">
+                                    <p><strong>Нет</strong>, к аккаунту должна быть привязана карта. Не беспокойтесь за списания, их не будет до конца пробного периода.</p>
+                                    <p>Когда вы привяжете новую карту к аккаунту, с неё спишется и тут же вернётся небольшая сумма — так мы проверяем, что с картой всё в порядке.</p>
+                                    <hr>
+                                    <p><em>Боюсь забыть отменить мультиподписку до конца пробного периода</em></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Вопрос 2 -->
+                    <div class="faq-item">
+                        <div class="faq-card">
+                            <div class="faq-question">
+                                <div class="faq-question-text">
+                                    Смогу ли я отключить мультиподписку до конца пробного периода?
+                                </div>
+                                <div class="faq-icon">+</div>
+                            </div>
+                            <div class="faq-answer">
+                                <div class="faq-answer-content">
+                                    <p>Да, вы можете отключить мультиподписку в любой момент через раздел "Подписка" в личном кабинете. Отмена вступит в силу сразу.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Вопрос 3 -->
+                    <div class="faq-item">
+                        <div class="faq-card">
+                            <div class="faq-question">
+                                <div class="faq-question-text">
+                                    На скольких устройствах можно смотреть фильмы?
+                                </div>
+                                <div class="faq-icon">+</div>
+                            </div>
+                            <div class="faq-answer">
+                                <div class="faq-answer-content">
+                                    <p>До 5 устройств одновременно. Поддерживаются:</p>
+                                    <ul>
+                                        <li>Смартфоны и планшеты</li>
+                                        <li>Компьютеры и ноутбуки</li>
+                                        <li>Smart TV</li>
+                                        <li>Игровые консоли</li>
+                                        <li>Медиаплееры</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Вопрос 4 -->
+                    <div class="faq-item">
+                        <div class="faq-card">
+                            <div class="faq-question">
+                                <div class="faq-question-text">
+                                    Доступны ли фильмы в 4К качестве?
+                                </div>
+                                <div class="faq-icon">+</div>
+                            </div>
+                            <div class="faq-answer">
+                                <div class="faq-answer-content">
+                                    <p>Да, большинство новых фильмов доступны в 4К Ultra HD с HDR. Для просмотра в 4К требуется:</p>
+                                    <ul>
+                                        <li>Подписка "Премиум"</li>
+                                        <li>Скорость интернета не менее 25 Мбит/с</li>
+                                        <li>Поддерживающее устройство и телевизор</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Вопрос 5 -->
+                    <div class="faq-item">
+                        <div class="faq-card">
+                            <div class="faq-question">
+                                <div class="faq-question-text">
+                                    Можно ли скачивать фильмы для офлайн-просмотра?
+                                </div>
+                                <div class="faq-icon">+</div>
+                            </div>
+                            <div class="faq-answer">
+                                <div class="faq-answer-content">
+                                    <p>Да, вы можете скачивать фильмы и сериалы на мобильные устройства. Ограничения:</p>
+                                    <ul>
+                                        <li>До 100 скачанных фильмов одновременно</li>
+                                        <li>Срок хранения - 30 дней</li>
+                                        <li>После начала просмотра - 48 часов</li>
+                                        <li>Только на смартфоны и планшеты</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Вопрос 6 -->
+                    <div class="faq-item">
+                        <div class="faq-card">
+                            <div class="faq-question">
+                                <div class="faq-question-text">
+                                    Как работает родительский контроль?
+                                </div>
+                                <div class="faq-icon">+</div>
+                            </div>
+                            <div class="faq-answer">
+                                <div class="faq-answer-content">
+                                    <p>Родительский контроль позволяет:</p>
+                                    <ul>
+                                        <li>Создавать детские профили с ограничениями по возрасту</li>
+                                        <li>Устанавливать пин-код для доступа к взрослому контенту</li>
+                                        <li>Ограничивать время просмотра</li>
+                                        <li>Просматривать историю просмотров ребенка</li>
+                                    </ul>
+                                    <p>Настройки доступны в разделе "Профиль и родительский контроль".</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="faq-decorative">
+                        Не нашли ответ на свой вопрос? Напишите в <a href="contacts.html" style="color: var(--color-accent);">службу поддержки</a>
+                    </div>
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Movie Stores. Все права защищены.</p>
+        </div>
+    </footer>
+    <script src="carousel.js"></script>
+    <script src="cart-system.js"></script>
+    <script src="auth-v2.js"></script>
+</body>
+</html>

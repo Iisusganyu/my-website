@@ -1,0 +1,141 @@
+﻿
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/logo1.png">
+    <title>Вход / Регистрация - Movie Stores</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Movie Stores Logo" class="logo">
+        </div>
+        <div class="container">
+            <!-- Этот div должен быть на ВСЕХ страницах -->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <a href="auth.html" class="header-btn login-btn">Вход</a>
+                <a href="cart.html" class="header-btn cart-btn">
+                    Корзина
+                    <span class="cart-badge">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="auth-page">
+        <div class="container">
+            <div class="auth-container">
+                <!-- Вкладки -->
+                <div class="auth-tabs">
+                    <button class="auth-tab active" data-tab="login">Вход</button>
+                    <button class="auth-tab" data-tab="register">Регистрация</button>
+                </div>
+
+                <!-- Форма входа -->
+                <form id="loginForm" class="auth-form active">
+                    <h3>Войти в аккаунт</h3>
+
+                    <div class="form-group">
+                        <label for="loginUsername">Имя пользователя</label>
+                        <input type="text" id="loginUsername" placeholder="Введите имя пользователя" required>
+                        <div class="error-message" id="loginUsernameError"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loginPassword">Пароль</label>
+                        <input type="password" id="loginPassword" placeholder="Введите пароль" required>
+                        <div class="error-message" id="loginPasswordError"></div>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="rememberMe">
+                            <span>Запомнить меня</span>
+                        </label>
+                        <a href="#" class="forgot-password">Забыли пароль?</a>
+                    </div>
+
+                    <button type="submit" class="auth-submit-btn">Войти</button>
+
+                    <div class="auth-divider">
+                        <span>или</span>
+                    </div>
+
+                    <button type="button" class="auth-social-btn">
+                        <span style="font-size: 20px; margin-right: 10px;">G</span>
+                        Войти через Google
+                    </button>
+                </form>
+
+                <!-- Форма регистрации -->
+                <form id="registerForm" class="auth-form">
+                    <h3>Создать аккаунт</h3>
+
+                    <div class="form-group">
+                        <label for="registerUsername">Имя пользователя</label>
+                        <input type="text" id="registerUsername" placeholder="Придумайте имя пользователя" required>
+                        <div class="error-message" id="registerUsernameError"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerEmail">Email</label>
+                        <input type="email" id="registerEmail" placeholder="Введите ваш email" required>
+                        <div class="error-message" id="registerEmailError"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerPassword">Пароль</label>
+                        <input type="password" id="registerPassword" placeholder="Придумайте пароль" required>
+                        <div class="error-message" id="registerPasswordError"></div>
+                        <div class="password-hint">
+                            <ul>
+                                <li id="lengthCheck">Минимум 8 символов</li>
+                                <li id="letterCheck">Заглавная и строчная буквы</li>
+                                <li id="numberCheck">Хотя бы одна цифра</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmPassword">Подтвердите пароль</label>
+                        <input type="password" id="confirmPassword" placeholder="Повторите пароль" required>
+                        <div class="error-message" id="confirmPasswordError"></div>
+                    </div>
+
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="termsAgree" required>
+                            <span>Я согласен с <a href="#" class="terms-link">Условиями использования</a></span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="auth-submit-btn">Зарегистрироваться</button>
+
+                    <div class="auth-switch">
+                        Уже есть аккаунт? <a href="#" class="switch-to-login">Войти</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Movie Stores. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="auth-v2.js"></script>
+    <script src="cart-system.js"></script>
+</body>
+</html>

@@ -1,0 +1,165 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/logo1.png">
+    <title>Голодные игры - CineHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Movie Stores Logo" class="logo">
+        </div>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <a href="auth.html" class="header-btn login-btn">Вход</a>
+                <a href="cart.html" class="header-btn cart-btn">
+                    Корзина
+                    <span class="cart-badge">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="product-page">
+        <div class="container">
+            <div class="product-card" data-product-id="hunger-games">
+                <img src="images/poster1.jpg" alt="Голодные игры" class="product-image">
+                <div class="product-info">
+                    <h1 class="product-title">Голодные игры (2012)</h1>
+                    <p class="rating">⭐ <span class="rating-value">7.3</span>/10 (IMDb)</p>
+                    <p><strong>Жанр:</strong> <span class="movie-genre">Фантастика, Боевик, Приключения, Триллер</span></p>
+                    <p><strong>Режиссер:</strong> <span class="movie-director">Гэри Росс</span></p>
+                    <p><strong>В ролях:</strong> <span class="movie-actors">Дженнифер Лоуренс, Джош Хатчерсон, Лиам Хемсворт, Элизабет Бэнкс</span></p>
+                    <p><strong>Продолжительность:</strong> <span class="movie-duration">142 мин.</span></p>
+                    <div class="description">
+                        <h3>Описание:</h3>
+                        <p class="movie-description">Будущее. Деспотичное государство ежегодно устраивает показательные игры на выживание, за которыми в прямом эфире следят весь мир. В этот раз участвовать будут юная Китнисс и тайно влюбленный в нее Пит. Они знакомы с детства, но теперь должны стать врагами. Ведь по нерушимому закону Голодных игр победить может только один из 24 участников. Судьям не важно, кто выиграет, главное — зрелище. И на этот раз зрелище будет незабываемым…</p>
+                    </div>
+                    <div class="price-section">
+                        <div class="price">Цена: <strong>499 руб.</strong></div>
+
+                        <!-- Основная кнопка (показывается когда товара нет в корзине) -->
+                        <button class="buy-btn" data-product-id="hunger-games">Добавить в корзину</button>
+
+                        <!-- Контейнер для управления количеством (показывается когда товар в корзине) -->
+                        <!-- В блоке с управлением количеством обновите кнопки: -->
+                        <div class="product-quantity-control">
+                            <button class="quantity-btn minus-btn" data-product-id="hunger-games">-</button>
+                            <span class="quantity-display">1</span>
+                            <button class="quantity-btn plus-btn" data-product-id="hunger-games">+</button>
+                            <span class="in-cart-text">В корзине</span>
+                        </div>
+                    </div>
+
+                    <!-- Дополнительная информация, которая заполнится автоматически -->
+                    <div class="movie-meta" style="display: none;">
+                        <div class="meta-item"><i class="fas fa-globe"></i> <span class="movie-country">Страна</span></div>
+                        <div class="meta-item"><i class="fas fa-award"></i> <span class="movie-awards">Награды</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Movie Stores. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Подключаем FontAwesome для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="cart-system.js"></script>
+    <script src="auth-v2.js"></script>
+    <script>
+        // Обязательная инициализация для страницы продукта
+        document.addEventListener('DOMContentLoaded', function () {
+            console.log('=== PRODUCT PAGE INIT ===');
+
+            // Функция для безопасной установки обработчиков
+            function setupProductControls() {
+                if (!window.cartSystem) return;
+
+                // Находим все контролы на этой странице
+                document.querySelectorAll('.product-quantity-control').forEach(control => {
+                    const minusBtn = control.querySelector('.minus-btn');
+                    const plusBtn = control.querySelector('.plus-btn');
+
+                    if (minusBtn && plusBtn) {
+                        const productId = minusBtn.dataset.productId || plusBtn.dataset.productId;
+
+                        if (!productId) return;
+
+                        // Устанавливаем обработчики только если их еще нет
+                        if (!minusBtn.hasAttribute('data-handler-set')) {
+                            minusBtn.setAttribute('data-handler-set', 'true');
+                            minusBtn.addEventListener('click', async function (e) {
+                                e.preventDefault();
+                                e.stopPropagation();
+                                if (productId) {
+                                    await cartSystem.updateQuantity(productId, -1);
+                                }
+                            });
+                        }
+
+                        if (!plusBtn.hasAttribute('data-handler-set')) {
+                            plusBtn.setAttribute('data-handler-set', 'true');
+                            plusBtn.addEventListener('click', async function (e) {
+                                e.preventDefault();
+                                e.stopPropagation();
+                                if (productId) {
+                                    await cartSystem.updateQuantity(productId, 1);
+                                }
+                            });
+                        }
+                    }
+                });
+            }
+
+            // Ждем загрузки cart-system
+            setTimeout(function () {
+                if (window.cartSystem) {
+                    console.log('Обновляем кнопки на странице продукта');
+
+                    // Принудительно загружаем корзину
+                    cartSystem.loadCart().then(() => {
+                        console.log('Корзина загружена');
+                        console.log('Товаров в корзине:', cartSystem.cart.length);
+
+                        // Обновляем кнопки
+                        cartSystem.updateProductButtons();
+
+                        // Настраиваем обработчики для этой страницы
+                        setupProductControls();
+
+                        // Логируем текущий продукт
+                        const productCard = document.querySelector('.product-card');
+                        const productId = productCard ? productCard.dataset.productId : 'unknown';
+                        console.log('Текущий продукт ID:', productId);
+
+                        // Проверяем, есть ли этот товар в корзине
+                        const inCart = cartSystem.cart.find(item => item.id === productId);
+                        console.log('Товар в корзине?', inCart ? `Да (${inCart.quantity} шт.)` : 'Нет');
+                    });
+                } else {
+                    console.error('Cart system не загружен!');
+                }
+            }, 500);
+        });
+    </script>
+
+    <!-- Подключаем наш скрипт для загрузки данных о фильмах -->
+    <script src="omdb-api.js"></script>
+</body>
+</html>

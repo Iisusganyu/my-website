@@ -1,0 +1,251 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/logo1.png">
+    <title>Каталог фильмов - Movie Stores</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Movie Stores Logo" class="logo">
+        </div>
+        <div class="container">
+            <!-- Этот div должен быть на ВСЕХ страницах -->
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <a href="auth.html" class="header-btn login-btn">Вход</a>
+                <a href="cart.html" class="header-btn cart-btn">
+                    Корзина
+                    <span class="cart-badge">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h1>Каталог фильмов</h1> <!--общий заголовок-->
+
+            <div class="catalog-grid">
+                <!--сетка, в которой несколько <div class="movie-card">-->
+                <!--карточка 1-->
+                <div class="movie-card">
+                    <img src="images/poster1.jpg" alt="Голодные игры" class="movie-image">
+                    <div class="movie-info">
+                        <h3>Голодные игры</h3>
+                        <p class="movie-year">2012 • Фантастика, Боевик, Приключения, Триллер</p>
+                        <p class="movie-price">499 руб.</p>
+                        <a href="product1.html" class="details-btn">Подробнее</a> <!--назначает ссылке CSS-класс details-btn. По этому классу в файле стилей (style.css) определяется внешний вид этой кнопки: её ширина, цвет, фон, анимация при наведении и т.д.-->
+                    </div>
+                </div>
+
+                <!--карточка 2-->
+                <div class="movie-card">
+                    <img src="images/poster2.jpg" alt="Меню" class="movie-image">
+                    <div class="movie-info">
+                        <h3>Меню</h3>
+                        <p class="movie-year">2022 • Комедия, Триллер</p>
+                        <p class="movie-price">499 руб.</p>
+                        <a href="product2.html" class="details-btn">Подробнее</a>
+                    </div>
+                </div>
+
+                <!--карточка 3-->
+                <div class="movie-card">
+                    <img src="images/poster3.jpg" alt="Его три дочери" class="movie-image">
+                    <div class="movie-info">
+                        <h3>Его три дочери</h3>
+                        <p class="movie-year">2023 • Драма</p>
+                        <p class="movie-price">599 руб.</p>
+                        <a href="product3.html" class="details-btn">Подробнее</a>
+                    </div>
+                </div>
+
+                <!--карточка 4-->
+                <div class="movie-card">
+                    <img src="images/poster4.jpg" alt="Дьявол носит прада" class="movie-image">
+                    <div class="movie-info">
+                        <h3>Дьявол носит прада</h3>
+                        <p class="movie-year">2006 • Драма, Комедия</p>
+                        <p class="movie-price">399 руб.</p>
+                        <a href="product4.html" class="details-btn">Подробнее</a>
+                    </div>
+                </div>
+
+                <!--карточка 5-->
+                <div class="movie-card">
+                    <img src="images/poster5.jpg" alt="Крик" class="movie-image">
+                    <div class="movie-info">
+                        <h3>Крик</h3>
+                        <p class="movie-year">1996 • Детектив, Триллер, Ужасы</p>
+                        <p class="movie-price">399 руб.</p>
+                        <a href="product5.html" class="details-btn">Подробнее</a>
+                    </div>
+                </div>
+
+                <!--карточка 6-->
+                <div class="movie-card">
+                    <img src="images/poster6.jpg" alt="Опасная игра Слоун" class="movie-image">
+                    <div class="movie-info">
+                        <h3>Опасная игра Слоун</h3>
+                        <p class="movie-year">2016 • Драма, Преступление</p>
+                        <p class="movie-price">599 руб.</p>
+                        <a href="product6.html" class="details-btn">Подробнее</a>
+                    </div>
+                </div>
+                <!--карточка 7-->
+                <div class="movie-card">
+                    <img src="images/poster7.jpg" alt="Интерстеллар" class="movie-image">
+                    <div class="movie-info">
+                        <h3>Интерстеллар</h3>
+                        <p class="movie-year">2014 • Фантастика, Драмма, Приключения</p>
+                        <p class="movie-price">499 руб.</p>
+                        <a href="product7.html" class="details-btn">Подробнее</a> <!--назначает ссылке CSS-класс details-btn. По этому классу в файле стилей (style.css) определяется внешний вид этой кнопки: её ширина, цвет, фон, анимация при наведении и т.д.-->
+                    </div>
+                </div>
+
+                <!--карточка 8-->
+                <div class="movie-card">
+                    <img src="images/poster8.jpg" alt="Богемская рапсодия" class="movie-image">
+                    <div class="movie-info">
+                        <h3>Богемская рапсодия</h3>
+                        <p class="movie-year">2018 • Биография, Музыка, Драма</p>
+                        <p class="movie-price">499 руб.</p>
+                        <a href="product8.html" class="details-btn">Подробнее</a>
+                    </div>
+                </div>
+
+                <!--карточка 9-->
+                <div class="movie-card">
+                    <img src="images/poster9.jpg" alt="Круэлла" class="movie-image">
+                    <div class="movie-info">
+                        <h3>Круэлла</h3>
+                        <p class="movie-year">2021 • Комедия, Криминал, Драма</p>
+                        <p class="movie-price">599 руб.</p>
+                        <a href="product9.html" class="details-btn">Подробнее</a>
+                    </div>
+                </div>
+
+                <!--карточка 10-->
+                <div class="movie-card">
+                    <img src="images/poster10.jpg" alt="Дом Gucci" class="movie-image">
+                    <div class="movie-info">
+                        <h3>Дом Gucci</h3>
+                        <p class="movie-year">2021 • Биография, Драма, Криминал, Триллер</p>
+                        <p class="movie-price">399 руб.</p>
+                        <a href="product10.html" class="details-btn">Подробнее</a>
+                    </div>
+                </div>
+
+                <!--карточка 11-->
+                <div class="movie-card">
+                    <img src="images/poster11.jpg" alt="Вечность" class="movie-image">
+                    <div class="movie-info">
+                        <h3>Вечность</h3>
+                        <p class="movie-year">2025 • Фэнтези, Драма, Мелодрама, Комедия</p>
+                        <p class="movie-price">399 руб.</p>
+                        <a href="product11.html" class="details-btn">Подробнее</a>
+                    </div>
+                </div>
+
+                <!--карточка 12-->
+                <div class="movie-card">
+                    <img src="images/poster12.jpg" alt="Это всё Агата" class="movie-image">
+                    <div class="movie-info">
+                        <h3>Это всё Агата</h3>
+                        <p class="movie-year">2024 • Фантастика, Боевик, Драма, Комедия</p>
+                        <p class="movie-price">599 руб.</p>
+                        <a href="product12.html" class="details-btn">Подробнее</a>
+                    </div>
+                </div>
+
+                <!--карточка 13-->
+                <div class="movie-card">
+                    <img src="images/poster13.jpg" alt="Дивергент" class="movie-image">
+                    <div class="movie-info">
+                        <h3>Дивергент</h3>
+                        <p class="movie-year">2014 • Фантастика, Детектив, Боевик, Мелодрама</p>
+                        <p class="movie-price">399 руб.</p>
+                        <a href="product13.html" class="details-btn">Подробнее</a>
+                    </div>
+                </div>
+
+                <!--карточка 14-->
+                <div class="movie-card">
+                    <img src="images/poster14.jpg" alt="Война миров Z" class="movie-image">
+                    <div class="movie-info">
+                        <h3>Война миров Z</h3>
+                        <p class="movie-year">2013 • Ужасы, Фантастика, Боевик</p>
+                        <p class="movie-price">399 руб.</p>
+                        <a href="product14.html" class="details-btn">Подробнее</a>
+                    </div>
+                </div>
+
+                <!--карточка 15-->
+                <div class="movie-card">
+                    <img src="images/poster15.jpg" alt="Тайна 7 сестёр" class="movie-image">
+                    <div class="movie-info">
+                        <h3>Тайна 7 сестёр</h3>
+                        <p class="movie-year">2017 • Фантастика, Боевик, Триллер, Детектив</p>
+                        <p class="movie-price">599 руб.</p>
+                        <a href="product15.html" class="details-btn">Подробнее</a>
+                    </div>
+                </div>
+
+                <!--карточка 16-->
+                <div class="movie-card">
+                    <img src="images/poster16.jpg" alt="Доктор Стрендж в мультивселенной безумия" class="movie-image">
+                    <div class="movie-info">
+                        <h3>Доктор Стрендж в мультивселенной безумия</h3>
+                        <p class="movie-year">
+                            2022 •
+                            Фэнтези, Боевик, Приключения, Фантастика, Ужасы
+                        </p>
+                        <p class="movie-price">399 руб.</p>
+                        <a href="product16.html" class="details-btn">Подробнее</a>
+                    </div>
+                </div>
+
+                <!--карточка 17-->
+                <div class="movie-card">
+                    <img src="images/poster17.jpg" alt="Ужасающий 3" class="movie-image">
+                    <div class="movie-info">
+                        <h3>Ужасающий 3</h3>
+                        <p class="movie-year">2024 • Ужасы</p>
+                        <p class="movie-price">499 руб.</p>
+                        <a href="product17.html" class="details-btn">Подробнее</a>
+                    </div>
+                </div>
+
+                <!--карточка 18-->
+                <div class="movie-card">
+                    <img src="images/poster18.jpg" alt="Пять ночей с Фредди" class="movie-image">
+                    <div class="movie-info">
+                        <h3>Пять ночей с Фредди</h3>
+                        <p class="movie-year">2023 • Ужасы, Драма</p>
+                        <p class="movie-price">399 руб.</p>
+                        <a href="product18.html" class="details-btn">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Movie Stores. Все права защищены.</p>
+        </div>
+    </footer>
+    <script src="cart-system.js"></script>
+    <script src="auth-v2.js"></script>
+</body>
+</html>

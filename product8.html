@@ -1,0 +1,101 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/logo1.png">
+    <title>Богемская рапсодия - CineHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Movie Stores Logo" class="logo">
+        </div>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <a href="auth.html" class="header-btn login-btn">Вход</a>
+                <a href="cart.html" class="header-btn cart-btn">
+                    Корзина
+                    <span class="cart-badge">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="product-page">
+        <div class="container">
+            <div class="product-card" data-product-id="bohemian-rhapsody">
+                <img src="images/poster8.jpg" alt="Богемская рапсодия" class="product-image">
+                <div class="product-info">
+                    <h1 class="product-title">Богемская рапсодия (2018)</h1>
+                    <p class="rating">⭐ <span class="rating-value">8.0</span>/10 (IMDb)</p>
+                    <p><strong>Жанр:</strong> <span class="movie-genre">Биография, Музыка, Драма</span></p>
+                    <p><strong>Режиссер:</strong> <span class="movie-director">Брайан Сингер</span></p>
+                    <p><strong>В ролях:</strong> <span class="movie-actors">Рами Малек, Люси Бойнтон, Гвилим Ли, Бен Харди</span></p>
+                    <p><strong>Продолжительность:</strong> <span class="movie-duration">134 мин.</span></p>
+                    <div class="description">
+                        <h3>Описание:</h3>
+                        <p class="movie-description">Чествование группы Queen, их музыки и их выдающегося вокалиста Фредди Меркьюри, который бросил вызов стереотипам и победил условности, чтобы стать одним из самых любимых артистов на планете. Фильм прослеживает головокружительный путь группы к успеху благодаря их культовым песням и революционному звуку, практически распад коллектива, поскольку образ жизни Меркьюри выходит из-под контроля, и их триумфальное воссоединение накануне концерта Live Aid, ставшим одним из величайших выступлений в истории рок-музыки.</p>
+                    </div>
+                    <div class="price-section">
+                        <div class="price">Цена: <strong>499 руб.</strong></div>
+
+                        <!-- Основная кнопка (показывается когда товара нет в корзине) -->
+                        <button class="buy-btn" data-product-id="bohemian-rhapsody">Добавить в корзину</button>
+
+                        <!-- Контейнер для управления количеством (показывается когда товар в корзине) -->
+                        <div class="product-quantity-control">
+                            <button class="quantity-btn minus-btn">-</button>
+                            <span class="quantity-display">1</span>
+                            <button class="quantity-btn plus-btn">+</button>
+                            <span class="in-cart-text">В корзине</span>
+                        </div>
+                    </div>
+
+                    <!-- Дополнительная информация, которая заполнится автоматически -->
+                    <div class="movie-meta" style="display: none;">
+                        <div class="meta-item"><i class="fas fa-globe"></i> <span class="movie-country">Страна</span></div>
+                        <div class="meta-item"><i class="fas fa-award"></i> <span class="movie-awards">Награды</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Movie Stores. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Подключаем FontAwesome для иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script src="cart-system.js"></script>
+    <script src="auth-v2.js"></script>
+    <script>
+        // Инициализация для страницы продукта
+        document.addEventListener('DOMContentLoaded', function () {
+            if (window.cartSystem) {
+                cartSystem.updateProductButtons();
+
+                // Добавляем обработчики для кнопок +/- после загрузки
+                setTimeout(function () {
+                    cartSystem.setupProductQuantityControls();
+                }, 100);
+            }
+        });
+    </script>
+
+    <!-- Подключаем наш скрипт для загрузки данных о фильмах -->
+    <script src="omdb-api.js"></script>
+</body>
+</html>
